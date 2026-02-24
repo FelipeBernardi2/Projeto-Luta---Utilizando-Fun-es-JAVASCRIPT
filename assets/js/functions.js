@@ -87,8 +87,8 @@ const stage = {
         const defenseFactor = Number((Math.random() * 2).toFixed(2));
 
 
-        const actualAttack = attacking.attack * attackFactor;
-        const actualDefense = attacked.defense * defenseFactor;
+        const actualAttack = Number((attacking.attack * attackFactor).toFixed(2));
+        const actualDefense = Number((attacked.defense * defenseFactor).toFixed(2));
 
         if (actualAttack > actualDefense) {
             attacked.life -= actualAttack;
